@@ -1,0 +1,38 @@
+.user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading__title {
+  margin-bottom: 0px;
+  margin-top: -20px;
+}
+
+.input__field {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 800;
+  outline: none;
+  font-style: italic;
+}
+
+.Button {
+  width: 100%;
+  color: rgba(0, 0, 0, 1);
+  padding: 8px;
+  background-color: #f3a847;
+  font-size: large;
+  margin-bottom: 5px;
+}
+
+.heading__name {
+  margin-top: 0px;
+  margin-bottom: -15px;
+}
+
+.Button__input {
+  width: 400px;
+}
