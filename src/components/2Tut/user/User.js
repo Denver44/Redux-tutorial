@@ -1,17 +1,14 @@
 import React, { useState } from "react";
-import { setName, selectName } from "./userSlice"; // importing selector selectName  ,setName  imported we dispatch and set name
+import { setName, selectName } from "./userSlice";
 import { useSelector, useDispatch } from "react-redux";
 import "./user.css";
 
 function User() {
-  const [input, setInput] = useState(""); // Hooks we used for taking the name for input field.
+  const [input, setInput] = useState("");
 
-  //   ------------------- USESELECTOR--------------------
-  const name = useSelector(selectName); // The useselctor help us to take change the name form redux store.
-  //   ------------------- USEDISPATCH--------------------
-  const dispatch = useDispatch(); // this help us to shoot new value to the reducer to chnage it state.
+  const name = useSelector(selectName); // The useSelctor help us to take chnage the name form redux store.
+  const dispatch = useDispatch(); // This help us to shoot new value to the reducer to Chnage it state.
   const handleclick = () => {
-    console.log("hiii ", input);
     dispatch(setName(input));
   };
   return (
@@ -20,6 +17,7 @@ function User() {
       <div className="Button__input">
         <input
           className="input__field"
+          placeholder="Enter a text"
           value={input}
           onChange={(e) => {
             setInput(e.target.value);
@@ -29,7 +27,7 @@ function User() {
           Update Your name in the Redux store
         </button>
       </div>
-      <h1 className="heading__name">{name}</h1>
+      <h3 className="heading__name">{name}</h3>
     </div>
   );
 }

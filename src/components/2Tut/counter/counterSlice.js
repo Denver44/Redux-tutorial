@@ -9,10 +9,6 @@ export const counterSlice = createSlice({
   // Reducers here listen our actions.
   reducers: {
     increment: (state) => {
-      // Redux Toolkit allows us to write "mutating" logic in reducers. It
-      // doesn't actually mutate the state because it uses the Immer library,
-      // which detects changes to a "draft state" and produces a brand new
-      // immutable state based off those changes
       state.count += 1;
     },
     decrement: (state) => {
@@ -25,7 +21,7 @@ export const counterSlice = createSlice({
   },
 });
 
-// we rae exporting the actions which we are going to perform.
+// we are exporting the actions which we are going to perform.
 export const { increment, decrement, incrementByAmount } = counterSlice.actions; // this actions is from reduxtoolkits wich help us to make easy our job so we can use this in our compnent.
 
 // The function below is called a thunk and allows us to perform async logic. It
