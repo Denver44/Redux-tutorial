@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "./logo.svg";
-import { Counter } from "./components/2Tut/counter/Counter";
-import User from "./components/2Tut/user/User";
+import { Counter } from "./counter/Counter";
+import User from "./user/User";
 import "./App.css";
 
 function App() {
