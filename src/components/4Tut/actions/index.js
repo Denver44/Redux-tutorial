@@ -29,7 +29,8 @@ export const fetchPostAndUsers = () => async (dispatch, getState) => {
 
   // This is chain from lodash lib here whater ever the result we get from _.chain it pass to map as first argument then same what ever we get output it pass to uniq. then foreach
   // .value is need to execute this.
-  _.chain(getState.post)
+
+  _.chain(getState().post)
     .map("userId")
     .uniq()
     .forEach((id) => dispatch(fetchUser(id)))

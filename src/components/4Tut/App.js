@@ -1,11 +1,9 @@
 import React from "react";
-import Post from "./PostList/Post";
+import Post from "./Post/Post";
 function App() {
   return (
     <div>
-      {/* <Post />
-       */}
-      <h1>Hello 😄</h1>
+      <Post />
     </div>
   );
 }
