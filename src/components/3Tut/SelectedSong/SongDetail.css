@@ -1,9 +1,0 @@
-.songDetail {
-  margin-left: 15px;
-  width: 250px;
-  border: 1px solid lightblue;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
