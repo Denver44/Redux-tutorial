@@ -1,12 +1,17 @@
-import { combineReducers } from "redux";
-import { Album } from "../data";
-
-const selectedSongReducer = (selectedSong = null, action) => {
-  if (action.type === "SONG_SELECTED") return action.payload;
-  return selectedSong;
+export const userReducer = (state = [], action) => {
+  switch (action.type) {
+    case "FETCH_USER":
+      return [...state, action.payload];
+    default:
+      return state;
+  }
 };
 
-export default combineReducers({
-  songs: Album,
-  selectedSong: selectedSongReducer,
-});
+export const postReducer = (state = [], action) => {
+  switch (action.type) {
+    case "FETCH_POST":
+      return action.payload;
+    default:
+      return state;
+  }
+};

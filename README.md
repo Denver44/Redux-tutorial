@@ -1,5 +1,5 @@
 **Simple Project Using Redux**
 
-    - Created a song list.
-    - While clicking on any song it will send to our redux store and save as their selected song.
-    - We can see the selected song name, duration and artist name.
+    - Created a post list and user list .
+    - here we have used redux thunk to make async call.
+    - as to make async call we need a middleware so here we used thunk.
