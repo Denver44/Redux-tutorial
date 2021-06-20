@@ -1,10 +1,8 @@
 import { combineReducers } from "redux";
-import { Album } from "../../public/data";
+import { Album } from "../data";
 
 const selectedSongReducer = (selectedSong = null, action) => {
-  if (action.type === "SONG_SELECTED") {
-    return action.payload;
-  }
+  if (action.type === "SONG_SELECTED") return action.payload;
   return selectedSong;
 };
 
