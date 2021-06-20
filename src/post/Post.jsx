@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchPost } from "../actions";
+import { fetchUserAndPost } from "../actions";
 import UserHeader from "../userHeader/UserHeader";
 import "./style.css";
 
@@ -8,10 +8,10 @@ const Post = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchPost());
+    dispatch(fetchUserAndPost());
   }, [dispatch]);
 
-  const posts = useSelector((state) => state.post);
+  const posts = useSelector((state) => state.posts);
 
   return (
     <div>
