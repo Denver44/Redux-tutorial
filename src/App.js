@@ -4,21 +4,31 @@ import { useDispatch } from "react-redux";
 function App() {
   const dispatch = useDispatch();
 
-  const action1 = createPolicy("Kevin", 20);
-  const action2 = createPolicy("MaxWell", 20);
-  const action3 = createPolicy("Root", 20);
-  const action4 = createPolicy("Jason", 20);
-  const action5 = createClaim("Root", 100);
-  const action6 = deletePolicy("Jason");
+  const createMyPolicy = () => {
+    const name = window.prompt("Enter Your Name : ")
+    const amount = window.prompt("Enter Amount to start your policy : ")
+    dispatch(createPolicy(name, amount))
+    window.alert('Your Policy is Created')
+  }
+  const claimMyPolicy = () => {
+    const name = window.prompt("Enter Your Name : ")
+    const amount = window.prompt("Enter the amount u want to claim : ")
+    dispatch(createClaim(name, amount))
+    window.alert('You claim is successful')
+  }
+  const deleteMyPolicy = () => {
+    const name = window.prompt("Enter Your Name : ")
+    dispatch(deletePolicy(name))
+    window.alert('Your Policy discarded')
+  }
 
-  dispatch(action1);
-  dispatch(action2);
-  dispatch(action3);
-  dispatch(action4);
-  dispatch(action5);
-  dispatch(action6);
-
-  return <div>THIS IS BASIC REDUX TUTORIAL</div>;
+  return (
+    <>
+      <button onClick={createMyPolicy}>createPolicy</button>
+      <button onClick={claimMyPolicy}>createClaim</button>
+      <button onClick={deleteMyPolicy}>deletePolicy</button>
+    </>
+  );
 }
 
 export default App;

@@ -9,9 +9,9 @@ export const claimsHistory = (oldListOfClaims = [], action) => {
 
 export const accounting = (bagOfMoney = 100, action) => {
   if (action.type === "CREATE_CLAIM") {
-    return bagOfMoney - action.payload.amountOfMoneyToCollect;
+    return bagOfMoney - Number(action.payload.amountOfMoneyToCollect);
   } else if (action.type === "CREATE_POLICY") {
-    return bagOfMoney + action.payload.amount;
+    return bagOfMoney + Number(action?.payload?.amount);
   }
   return bagOfMoney;
 };
