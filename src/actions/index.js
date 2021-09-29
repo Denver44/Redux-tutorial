@@ -1,11 +1,10 @@
-import jsonPlaceHolder from "../api/jsonPlaceHolder";
+import UsersAPI from "../api";
 
 export const fetchPost = () => async (dispatch) => {
-  const response = await jsonPlaceHolder.get("/posts");
+  const response = await UsersAPI.get("/posts");
   dispatch({ type: "FETCH_POST", payload: response.data });
 };
 
-export const fetchUser = (id) => async (dispatch) => {
-  const response = await jsonPlaceHolder.get(`/users/${id}`);
-  dispatch({ type: "FETCH_USER", payload: response.data });
+export const addPost = (payload) => {
+  return { type: "ADD_POST", payload };
 };

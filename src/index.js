@@ -6,6 +6,7 @@ import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
 import { webApp } from "./store/store";
 import thunk from "redux-thunk";
+import "bootstrap/dist/css/bootstrap.css";
 
 const store = createStore(webApp, applyMiddleware(thunk));
 

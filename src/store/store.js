@@ -1,9 +1,10 @@
 import { combineReducers } from "redux";
-import { postReducer, userReducer } from "../reducers/index";
+import { postReducer } from "../reducers/index";
+import { reducer as formReducer } from "redux-form";
 
 export const webApp = combineReducers({
   post: postReducer,
-  user: userReducer,
+  form: formReducer,
 });
 
 export default webApp;
