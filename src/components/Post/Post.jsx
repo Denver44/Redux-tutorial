@@ -24,7 +24,7 @@ const Post = () => {
       </Button>
       {posts?.map((post) => {
         return (
-          <div className="p-3 bg-success mt-2 rounded d-flex justify-content-around">
+          <div className="p-3 bg-success mt-2 rounded d-flex">
             <Toast>
               <ToastHeader>{post?.title}</ToastHeader>
               <ToastBody>{post?.body} </ToastBody>

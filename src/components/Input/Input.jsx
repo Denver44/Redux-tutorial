@@ -1,12 +1,6 @@
 import React from "react";
 
 const Input = (props) => {
-  const renderError = ({ touched, error }) => {
-    if (touched && error) {
-      return <div>{error}</div>;
-    }
-  };
-
   return (
     <>
       <label>{props.label}</label>
@@ -15,7 +9,6 @@ const Input = (props) => {
         onChange={props.input.onChange}
         autoComplete="off"
       />
-      {renderError(props.meta)}
     </>
   );
 };
