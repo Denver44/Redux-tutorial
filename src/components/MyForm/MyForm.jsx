@@ -1,40 +1,36 @@
-import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Row } from "reactstrap";
 import { Field, reduxForm } from "redux-form";
-import { addPost } from "../../actions";
+import { createStudentRequest } from "../../actions/students";
 import Input from "../Input/Input";
 
 const MyForm = (props) => {
   const dispatch = useDispatch();
-  const [id, setId] = useState(101);
 
   const onSave = (formValues) => {
     dispatch(
-      addPost({
-        title: formValues?.title,
-        body: formValues?.description,
-        id: id,
+      createStudentRequest({
+        name: formValues?.name,
+        address: formValues?.address,
       })
     );
-    setId((oldId) => oldId + 1);
   };
 
   return (
     <form onSubmit={props.handleSubmit(onSave)}>
       <Row className="mt-2">
         <Field
-          name="title"
+          name="name"
           component={Input}
-          label="Enter Post Title"
+          label="Enter Name"
           className="mt-2"
         />
       </Row>
       <Row className="mt-2">
         <Field
-          name="description"
+          name="address"
           component={Input}
-          label="Enter Post Description"
+          label="Enter Address"
           className="mt-2"
         />
       </Row>
@@ -44,5 +40,5 @@ const MyForm = (props) => {
 };
 
 export default reduxForm({
-  form: "createPost",
+  form: "createStudent",
 })(MyForm);

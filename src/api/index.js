@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const UsersAPI = axios.create({
-  baseURL: "https://jsonplaceholder.typicode.com/",
+const StudentAPI = axios.create({
+  baseURL: "http://localhost:8000",
 });
 
-export default UsersAPI
+export default StudentAPI;
