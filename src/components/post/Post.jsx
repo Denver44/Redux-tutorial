@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchUserAndPost } from "../actions";
+import { fetchUserAndPost } from "../../actions";
 import UserHeader from "../userHeader/UserHeader";
 import "./style.css";
 
@@ -9,13 +9,13 @@ const Post = () => {
 
   useEffect(() => {
     dispatch(fetchUserAndPost());
-  }, [dispatch]);
+  }, []);
 
   const posts = useSelector((state) => state.posts);
 
   return (
     <div>
-      {posts.map((post) => {
+      {posts?.map((post) => {
         return (
           <div key={post.id} className="post__first">
             <h4 className="post__h4">{post.id}</h4>
