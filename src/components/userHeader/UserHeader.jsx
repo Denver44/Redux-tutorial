@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchUser } from "../actions";
+import { fetchUser } from "../../actions";
 
 function UserHeader({ userId }) {
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchUser(userId));
-  }, []);
+  }, [dispatch, userId]);
 
   const users = useSelector((state) =>
     state.user.find((user) => user.id === userId)

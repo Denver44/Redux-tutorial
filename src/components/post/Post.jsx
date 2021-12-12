@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchPost } from "../actions";
+import { fetchPost } from "../../actions";
 import UserHeader from "../userHeader/UserHeader";
 import "./style.css";
 
