@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { searchRepositories } from '../redux/repositories/action.creators';
+import { RootState } from '../redux/reducer';
+import { searchRepositories } from '../redux/repositories';
 
 const RepositoriesList: React.FC = () => {
   const [term, setTerm] = useState('');
   const dispatch = useDispatch();
 
   const { data, error, loading } = useSelector(
-    (state: any) => state.repositories
+    (state: RootState) => state.repositories
   );
 
   const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
