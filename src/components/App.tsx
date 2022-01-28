@@ -1,5 +1,5 @@
 import { Provider } from 'react-redux';
-import { store } from '../state';
+import { store } from '../redux/store';
 import RepositoriesList from './RepositoriesList';
 
 const App = () => {
