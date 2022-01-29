@@ -1,3 +1,3 @@
 export * from './actions.interfaces';
-export * from './action.creators';
+export * as repositoriesAction from './action.creators';
 export * from './data.interfaces';
